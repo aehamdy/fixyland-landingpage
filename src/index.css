@@ -1,11 +1,13 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #000;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +15,73 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@theme {
+  /* Colors */
+  --color-accent-primary: #1f8f6a;
+  --color-accent-secondary: #e6c466;
+
+  --color-content-light: #ffffff;
+  --color-content-muted: #a9afad;
+  --color-content-dark: #080806;
+  --color-content-dark-alt: #272727;
+
+  --color-surface-light: #ffffff;
+  --color-surface-alt: #e9f0ec;
+  --color-surface-dark: #191a19;
+  --color-surface-dark-alt: #1d1d1c;
+
+  /* Font Sizes */
+  --font-size-tiny: 0.625rem; /* 10px */
+  --font-size-small: 0.75rem; /* 12px */
+  --font-size-regular: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-medium: 1.125rem; /* 18px */
+  --font-size-large: 1.25rem; /* 20px */
+  --font-size-xlarge: 1.375rem; /* 22px */
+  --font-size-2xlarge: 1.5rem; /* 24px */
+  --font-size-3xlarge: 1.625rem; /* 26px */
+  --font-size-4xlarge: 1.75rem; /* 28px */
+
+  /* Spacings */
+  --spacing-xxs: 0.375rem; /* 6px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 0.625rem; /* 10px */
+  --spacing-md: 0.75rem; /* 12px */
+  --spacing-lg: 0.875rem; /* 14px */
+  --spacing-xl: 1rem; /* 16px */
+  --spacing-2xl: 1.125rem; /* 18px */
+  --spacing-3xl: 1.25rem; /* 20px */
+  --spacing-4xl: 1.375rem; /* 22px */
+  --spacing-5xl: 1.5rem; /* 24px */
+  --spacing-6xl: 1.625rem; /* 26px */
+  --spacing-7xl: 1.75rem; /* 28px */
+  --spacing-8xl: 2rem; /* 32px */
+  --spacing-9xl: 2.25rem; /* 36px */
+  --spacing-10xl: 2.5rem; /* 40px */
+  --spacing-11xl: 3rem; /* 48px */
+  --spacing-12xl: 4rem; /* 64px */
+
+  /* Radius */
+  --radius-tiny: 0.125rem; /* 2px */
+  --radius-small: 0.25rem; /* 4px */
+  --radius-medium: 0.375rem; /* 6px */
+  --radius-regular: 0.5rem; /* 8px */
+  --radius-large: 0.75rem; /* 12px */
+  --radius-xlarge: 1rem; /* 16px */
+  --radius-xxlarge: 1.5rem; /* 24px */
+  --radius-huge: 2rem; /* 32px */
+  --radius-full: 100%; /* fully rounded */
+
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-medium: 300ms;
+  --duration-slow: 450ms;
+  --duration-slower: 600ms;
+  --duration-slowest: 750ms;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  width: 100%;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
