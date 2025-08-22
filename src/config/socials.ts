@@ -1,5 +1,5 @@
 import type { IconName } from "../components/common/Icon";
-import { info } from "./Info";
+import { info } from "./info";
 
 type Social = {
   id: number;

@@ -1,4 +1,4 @@
-import { info } from "../../config/Info";
+import { info } from "../../config/info";
 
 function Logo() {
   return (

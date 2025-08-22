@@ -1,4 +1,4 @@
-import { info } from "../config/Info";
+import { info } from "../config/info";
 import { socials } from "../config/socials";
 import Icon from "./common/Icon";
 
