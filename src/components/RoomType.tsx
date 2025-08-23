@@ -50,14 +50,14 @@ function RoomType() {
         />
       </div>
 
-      <div className="w-full mt-6 overflow-x-auto">
+      <div className="w-full mt-6 overflow-x-auto cursor-grabbing">
         <ul
           ref={containerRef}
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
-          className="flex gap-4 overflow-x-auto snap-x w-full no-scrollbar"
+          className="no-scrollbar flex gap-4 overflow-x-auto snap-x w-full"
         >
           {roomList.map((room) => (
             <li
