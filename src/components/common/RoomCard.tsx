@@ -18,7 +18,7 @@ function RoomCard({ room }: RoomCardProps) {
         />
 
         <div className="absolute top-2 start-2 w-fit p-1 px-2 text-small text-white bg-accent-primary rounded-lg">
-          ${room.price}/Night
+          {room.price ? `${room.price}/Night` : room.type && room.type}
         </div>
       </div>
 
@@ -29,22 +29,42 @@ function RoomCard({ room }: RoomCardProps) {
           className="font-bold text-content-dark dark:text-content-light"
         />
 
-        <div className="flex items-center gap-4 text-content-muted dark:text-content-light">
-          <div className="flex items-center gap-1">
-            <Icon name="users" size={18} className="text-accent-primary" />
-            <span>{room.specialities.maximumOccupancy} People</span>
-          </div>
+        {room.specialities ? (
+          <div className="flex items-center gap-4 text-content-muted dark:text-content-light">
+            <div className="flex items-center gap-1">
+              <Icon name="users" size={18} className="text-accent-primary" />
+              <span>{room.specialities.maximumOccupancy} People</span>
+            </div>
 
-          <div className="flex items-center gap-1">
-            <Icon name="bed" size={18} className="text-accent-primary" />
-            <span>{room.specialities.numberOfBeds} Beds</span>
-          </div>
+            <div className="flex items-center gap-1">
+              <Icon name="bed" size={18} className="text-accent-primary" />
+              <span>{room.specialities.numberOfBeds} Beds</span>
+            </div>
 
-          <div className="flex items-center gap-1">
-            <Icon name="bath" size={18} className="text-accent-primary" />
-            <span>{room.specialities.numberOfBathrooms} Bath</span>
+            <div className="flex items-center gap-1">
+              <Icon name="bath" size={18} className="text-accent-primary" />
+              <span>{room.specialities.numberOfBathrooms} Bath</span>
+            </div>
           </div>
-        </div>
+        ) : (
+          room.published && (
+            <div className="flex items-center gap-4 text-content-muted dark:text-content-light">
+              <div className="flex items-center gap-1">
+                <Icon
+                  name="calendar"
+                  size={18}
+                  className="text-accent-primary"
+                />
+                <span>{room.published.date.at}</span>
+              </div>
+
+              <div className="flex items-center gap-1">
+                <Icon name="user" size={18} className="text-accent-primary" />
+                <span>{room.published.author.by}</span>
+              </div>
+            </div>
+          )
+        )}
 
         <p className="text-content-muted dark:text-content-light">
           {room.description}
