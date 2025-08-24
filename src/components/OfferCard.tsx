@@ -7,14 +7,14 @@ type OfferCardProps = {
 
 function OfferCard({ offer }: OfferCardProps) {
   return (
-    <article className="relative flex flex-col gap-2 aspect-[16/11] rounded-lg overflow-hidden">
+    <article className="relative flex flex-col items-center gap-2 rounded-lg overflow-hidden max-h-[230px] md:max-h-[340px]">
       <img
         src={offer.image}
         alt={offer.title}
         className="w-full h-full object-cover object-center"
       />
 
-      <div className="absolute w-full h-full top-0 start-0 flex items-center p-4 bg-black/40">
+      <div className="absolute inset-0 flex items-center p-4 bg-black/40">
         <div className="space-y-3">
           <div className="w-fit py-1 px-2 text-regular md:text-base text-content-light border">
             {offer.discount}% Off
