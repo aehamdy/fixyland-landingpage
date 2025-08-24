@@ -10,7 +10,7 @@ function SectionHeading({ title, className }: SectionHeadingProps) {
     <Heading
       level="h2"
       title={title}
-      className={`font-bold text-large md:text-large lg:text-5xl text-content-dark-alt dark:text-content-light ${className}`}
+      className={`font-bold text-large md:text-large lg:text-3xl text-content-dark-alt dark:text-content-light ${className}`}
     />
   );
 }
