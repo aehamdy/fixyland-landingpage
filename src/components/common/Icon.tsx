@@ -9,13 +9,16 @@ import {
   LuChevronDown,
   LuFacebook,
   LuMenu,
+  LuMoon,
   LuPlus,
   LuQuote,
   LuSearch,
   LuStar,
+  LuSun,
   LuUserRound,
   LuUsersRound,
 } from "react-icons/lu";
+import { MdBathtub } from "react-icons/md";
 import { PiTowel } from "react-icons/pi";
 import { RiTwitterXFill } from "react-icons/ri";
 import { RxInstagramLogo } from "react-icons/rx";
@@ -30,6 +33,7 @@ export type IconName =
   | "arrow-up-right"
   | "chevron-down"
   | "bicycle"
+  | "bathtub"
   | "swimming"
   | "towel"
   | "circle-check"
@@ -40,7 +44,9 @@ export type IconName =
   | "plus"
   | "calendar"
   | "user"
-  | "users";
+  | "users"
+  | "sun"
+  | "moon";
 
 const iconMap = {
   facebook: LuFacebook,
@@ -52,6 +58,7 @@ const iconMap = {
   "arrow-up-right": LuArrowUpRight,
   "chevron-down": LuChevronDown,
   bicycle: IoIosBicycle,
+  bathtub: MdBathtub,
   swimming: FaPersonSwimming,
   towel: PiTowel,
   "circle-check": FaRegCheckCircle,
@@ -63,6 +70,8 @@ const iconMap = {
   calendar: LuCalendar,
   user: LuUserRound,
   users: LuUsersRound,
+  sun: LuSun,
+  moon: LuMoon,
 };
 
 interface IconProps {
