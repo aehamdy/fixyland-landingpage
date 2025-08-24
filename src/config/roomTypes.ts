@@ -2,6 +2,7 @@ import room1 from "../assets/room-1.webp";
 import room2 from "../assets/room-2.webp";
 import room3 from "../assets/room-3.webp";
 import room4 from "../assets/room-4.webp";
+import type { PublislhedType } from "./hotelNews";
 
 type Specialities = {
   maximumOccupancy: number;
@@ -13,9 +14,11 @@ export type RoomType = {
   id: number;
   title: string;
   description: string;
-  price: number;
+  price?: number;
+  type?: string;
   image: string;
-  specialities: Specialities;
+  specialities?: Specialities;
+  published?: PublislhedType;
 };
 
 export const roomList: RoomType[] = [
