@@ -12,11 +12,11 @@ function Header() {
   };
 
   return (
-    <header className="relative flex items-center justify-between w-full pe-5xl bg-transparent">
+    <header className="relative flex items-center justify-between w-full pe-sm md:pe-5xl bg-transparent">
       <NavMenu isNavMenuOpen={isNavMenuOpen} />
 
       <div className="flex justify-center items-center h-full py-sm md:py-lg px-2xl md:px-6xl lg:px-9xl font-bold text-3xl text-content-dark bg-white">
-        <Logo />
+        <Logo mode="dark" isScalable />
       </div>
 
       <NavBar />
